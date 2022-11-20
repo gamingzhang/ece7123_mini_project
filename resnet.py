@@ -117,9 +117,3 @@ def ResNet_V4():
 
 def ResNet_V5():
     return ResNet_three_layers(BasicBlock, [2, 2, 4], [65, 130, 251])
-
-
-def test():
-    net = ResNet18()
-    y = net(torch.randn(1, 3, 32, 32))
-    print(y.size())
