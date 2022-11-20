@@ -3,6 +3,7 @@
 NYU ECE7123 mini project
 
 Group Members:
-Keng-Ming Chang
-Jincheng Tian
-Kaiyu Pei
+
+1. Kaiyu Pei
+2. Keng-Ming Chang
+3. Jincheng Tian
