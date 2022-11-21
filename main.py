@@ -1,4 +1,14 @@
-'''Train CIFAR10 with PyTorch.'''
+'''
+Train CIFAR10 with PyTorch.
+
+Reference:
+[1] Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+    Deep Residual Learning for Image Recognition. arXiv:1512.03385
+
+[2] Train CIFAR10 with PyTorch
+https://github.com/kuangliu/pytorch-cifar
+'''
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
