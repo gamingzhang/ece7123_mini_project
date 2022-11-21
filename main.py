@@ -7,17 +7,18 @@ import torch.backends.cudnn as cudnn
 
 import torchvision
 import torchvision.transforms as transforms
+from torchsummary import summary
 
 import os
 import argparse
 
-import resnet
+from resnet import *
 from utils import progress_bar
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
-args = parser.parse_args()
+args, _ = parser.parse_known_args()
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 best_acc = 0  # best test accuracy
@@ -129,6 +130,8 @@ def test(epoch):
         torch.save(state, './checkpoint/ckpt.pth')
         best_acc = acc
 
+print('==> Model Summary')
+print(summary(net, (3, 32, 32), trainloader.batch_size))
 
 for epoch in range(start_epoch, start_epoch + 200):
     train(epoch)
