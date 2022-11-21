@@ -47,12 +47,12 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship'
 
 # Model
 print('==> Building model..')
-net = ResNet18()
+# net = ResNet18()
 # net = ResNet_V1()
 # net = ResNet_V2()
 # net = ResNet_V3()
 # net = ResNet_V4()
-# net = ResNet_V5()
+net = ResNet_V5()
 
 net = net.to(device)
 if device == 'cuda':

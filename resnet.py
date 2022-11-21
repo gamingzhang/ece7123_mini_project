@@ -1,3 +1,10 @@
+'''ResNet in PyTorch.
+For Pre-activation ResNet, see 'preact_resnet.py'.
+Reference:
+[1] Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun
+    Deep Residual Learning for Image Recognition. arXiv:1512.03385
+'''
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -94,26 +101,3 @@ class ResNet_three_layers(nn.Module):
         out = self.linear(out)
         return out
 
-
-def ResNet18():
-    return ResNet(BasicBlock, [2, 2, 2, 2])
-
-
-def ResNet_V1():
-    return ResNet(BasicBlock, [1, 1, 1, 1])
-
-
-def ResNet_V2():
-    return ResNet_three_layers(BasicBlock, [4, 5, 3], [64, 128, 256])
-
-
-def ResNet_V3():
-    return ResNet_three_layers(BasicBlock, [2, 2, 4], [64, 128, 256])
-
-
-def ResNet_V4():
-    return ResNet_three_layers(BasicBlock, [2, 2, 4], [64, 128, 250])
-
-
-def ResNet_V5():
-    return ResNet_three_layers(BasicBlock, [2, 2, 4], [65, 130, 251])
