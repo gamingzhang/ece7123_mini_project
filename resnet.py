@@ -101,3 +101,26 @@ class ResNet_three_layers(nn.Module):
         out = self.linear(out)
         return out
 
+
+def ResNet18():
+    return ResNet(BasicBlock, [2, 2, 2, 2])
+
+
+def ResNet_V1():
+    return ResNet(BasicBlock, [1, 1, 1, 1])
+
+
+def ResNet_V2():
+    return ResNet_three_layers(BasicBlock, [2, 2, 4], [64, 128, 256])
+
+
+def ResNet_V3():
+    return ResNet_three_layers(BasicBlock, [2, 2, 4], [64, 128, 250])
+
+
+def ResNet_V4():
+    return ResNet_three_layers(BasicBlock, [2, 2, 4], [64, 130, 251])
+
+
+def ResNet_V5():
+    return ResNet_three_layers(BasicBlock, [4, 5, 3], [64, 128, 256])
