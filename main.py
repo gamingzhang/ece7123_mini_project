@@ -130,8 +130,9 @@ def test(epoch):
         torch.save(state, './checkpoint/ckpt.pth')
         best_acc = acc
 
+
 print('==> Model Summary')
-print(summary(net, (3, 32, 32), trainloader.batch_size))
+summary(net, (3, 32, 32), trainloader.batch_size)
 
 for epoch in range(start_epoch, start_epoch + 200):
     train(epoch)
