@@ -1,9 +1,17 @@
-# ece7123_mini_project
+# NYU ECE7123 mini project
 
-NYU ECE7123 mini project
+## Usage
 
-Group Members:
+```python
+python3 main.py
+```
+
+## Group Members
 
 1. Kaiyu Pei
 2. Keng-Ming Chang
 3. Jincheng Tian
+
+## Result
+
+For the model training results, see .ipynb
