@@ -14,4 +14,4 @@ python3 main.py
 
 ## Result
 
-For the model training results, see `mini-proj_ipynb`
+For the model training results, see `mini-proj_ipynb`.
